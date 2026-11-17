@@ -1,0 +1,41 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, sans-serif; line-height: 1.5; color: #222; }
+
+.header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 24px; background: #fff; border-bottom: 1px solid #eee;
+  position: sticky; top: 0;
+}
+.header nav a { margin-left: 16px; text-decoration: none; color: #222; }
+.btn-nav { background: #2563eb; color: #fff; padding: 8px 14px; border-radius: 6px; }
+.logo { height: 40px; }
+
+.section { max-width: 800px; margin: 32px auto; padding: 0 16px; }
+.section h2 { margin-bottom: 16px; }
+.card { background: #f7f7f7; padding: 16px; border-radius: 8px; margin-bottom: 12px; }
+
+.signup form { display: flex; flex-direction: column; gap: 12px; max-width: 480px; }
+.signup label { display: flex; flex-direction: column; font-size: 14px; }
+.signup input, .signup select, .signup textarea {
+  margin-top: 4px; padding: 8px; border: 1px solid #ccc; border-radius: 6px;
+  font: inherit;
+}
+.checkbox { flex-direction: row !important; align-items: center; gap: 8px; }
+.checkbox input { width: auto; margin: 0; }
+
+button[type="submit"] {
+  background: #2563eb; color: #fff; padding: 10px; border: none;
+  border-radius: 6px; cursor: pointer; font-size: 16px;
+}
+button[type="submit"]:disabled { opacity: 0.6; cursor: default; }
+
+.status { font-size: 14px; min-height: 20px; }
+.status.ok { color: #16a34a; }
+.status.err { color: #dc2626; }
+
+.vk-block { margin-top: 24px; }
+.btn-vk {
+  display: inline-block; background: #0077FF; color: #fff;
+  padding: 10px 16px; border-radius: 6px; text-decoration: none;
+}
+footer { text-align: center; padding: 24px; color: #777; font-size: 13px; }

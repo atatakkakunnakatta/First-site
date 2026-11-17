@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Школа — запись на занятия</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <img src="img/logo.png" alt="Логотип" class="logo">
+  <nav>
+    <a href="#news">Новости</a>
+    <a href="#schedule">Расписание</a>
+    <a href="#about">О школе</a>
+    <a href="#signup" class="btn-nav">Записаться</a>
+  </nav>
+</header>
+
+<main>
+  <section id="news" class="section">
+    <h2>Новости</h2>
+    <article class="card">
+      <h3>Открыт набор на новый учебный год</h3>
+      <p>Запись доступна через форму ниже или через ВК-бота.</p>
+    </article>
+  </section>
+
+  <section id="schedule" class="section">
+    <h2>Расписание</h2>
+    <article class="card">
+      <h3>Группа A — понедельник, 18:00</h3>
+    </article>
+  </section>
+
+  <section id="about" class="section">
+    <h2>О школе</h2>
+    <p>Краткое описание.</p>
+  </section>
+
+  <section id="signup" class="section signup">
+    <h2>Записаться на занятие</h2>
+
+    <form id="signup-form">
+      <label>
+        Имя *
+        <input type="text" name="name" required minlength="2">
+      </label>
+      <label>
+        Телефон или email *
+        <input type="text" name="contact" required minlength="5">
+      </label>
+      <label>
+        Занятие *
+        <select name="course" required>
+          <option value="">— выберите —</option>
+          <option value="group-a">Группа A</option>
+          <option value="group-b">Группа B</option>
+        </select>
+      </label>
+      <label>
+        Примечание
+        <textarea name="note" rows="3"></textarea>
+      </label>
+
+      <!-- honeypot: скрытое поле для отсева ботов -->
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+      <label class="checkbox">
+        <input type="checkbox" name="consent" required>
+        Я согласен с обработкой персональных данных
+      </label>
+
+      <button type="submit">Отправить заявку</button>
+      <p id="form-status" class="status"></p>
+    </form>
+
+    <div class="vk-block">
+      <p>Или запишитесь через ВКонтакте:</p>
+      <a href="https://vk.me/ваше_сообщество" target="_blank" rel="noopener" class="btn-vk">
+        Написать боту в ВК
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 Школа. Все права защищены.</p>
+</footer>
+
+<script src="js/form.js"></script>
+</body>
+</html>
